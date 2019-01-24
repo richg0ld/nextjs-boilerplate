@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": false,
+    "outDir": ".next/production-server/"
+  },
+  "include": ["server/**/*.ts"]
+}

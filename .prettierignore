@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# locking file
+package-lock.json
+yarn.lock
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+out/
+
+# vscode
+.vscode
+
+# jet brains idea
+.idea
+
+#cache
+.cache
+lang/.messages
+
+#source map
+*.map
+
+#typescript compiled server file
+server/**/*.js
+
+#jest test coverage
+coverage

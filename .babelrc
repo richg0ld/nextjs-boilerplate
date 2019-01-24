@@ -1,0 +1,35 @@
+{
+  "presets": [
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ],
+  "plugins": [
+    "styled-components",
+    "inline-react-svg"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-intl"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "react-intl"
+      ]
+    },
+    "test": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "preset-env": {
+              "modules": "commonjs"
+            }
+          }
+        ],
+        "@zeit/next-typescript/babel"
+      ]
+    }
+  }
+}
