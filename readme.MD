@@ -1,4 +1,7 @@
-# Fortnite Web<!-- TOC -->
+#Next.js boilerplate
+국내에는 next.js에 대한 예제를 많이 찾아볼 수 없어서. 이전 프로젝트에서 활용한 노하우를 통해 보일러플레이트를 만들었음. 처음 사용하거나 프로덕션에 적용하려는 분들에게 조금이나마 도움이 되었으면 좋겠음.
+
+#Navigation<!-- TOC -->
 
 - [Spec](#Spec)
 - [Prerequisites](#Prerequisites)
@@ -22,20 +25,18 @@
 - [o] static 파일 설정 (도메인 변경) (https://github.com/zeit/next.js/tree/canary/examples/root-static-files)
 - [o] 환경변수 설정 (https://github.com/zeit/next.js/tree/canary/examples/with-dotenv)
 - [o] 쿠키 관리 
-- ~~[ ] 캐시 강제로 날리는 법 (배포시) : 캐시를 서버 실행하고서 객체에다 쌓아놓는 방식으로 되어있어서 서버를 재실행 하게되면 캐시가 아예 빈 상태로 시작하게됨. 그래서 강제 캐시 삭제는 궅이 없어도 될듯.~~
-- [o] **상태관리 (redux등을 붙일 수 있는지)
-    - ~~[ ] Context, GraphQL : 시기상조라 고려 안하기로 함 (해도 다음 프로젝트에서)~~
+- [ ] 캐시 관리 (기능은 있으나 아직 활용을 못함.) 
+- [o] 상태관리 (redux)
+    - [o] Context api
+    - [ ] GraphQL (추후 적용)
 - [o] 스타일링 styled-component ( https://github.com/zeit/next.js/tree/canary/examples/with-styled-components)
 - [o] 테마 작업 환경
 - [o] 페이지 이동시 로딩바(프로그레스바) (https://github.com/zeit/next.js/tree/canary/examples/with-loading)
 - [o] 로거환경
 - [o] immutable
-- [o] 커스텀 페이지(이벤트 페이지)
+- [o] 커스텀 페이지(etc 페이지)
 - [o] tooltip
-- ~~[ ] 지도(아직 필요 없음.)~~
 - [o] test 환경 (jest, enzyme 으로 세팅 storybook은 nextjs환경에서의 문제인지 react16버전의 문제인지 정상작동 하지 않아서 포기)
-- ~~[ ] jwt 확인(역시 아직 필요 없음.)~~
-- [o] facebook, ga sdk
 - [o] 폴리필 (ie10 <) 적용
 - [o] 프로세스 메니저 세팅
 - [o] svg 이미지 적용(색상 바꿀 수 있도록)
