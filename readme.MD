@@ -1,8 +1,8 @@
-#Next.js boilerplate
+# Next.js boilerplate
 
 국내에는 next.js에 대한 예제를 많이 찾아볼 수 없어서. 이전 프로젝트에서 활용한 노하우를 통해 보일러플레이트를 만들었음. 처음 사용하거나 프로덕션에 적용하려는 분들에게 조금이나마 도움이 되었으면 좋겠음.
 
-#Navigation<!-- TOC -->
+# Navigation<!-- TOC -->
 
 - [Spec](#Spec)
 - [Prerequisites](#Prerequisites)
@@ -15,7 +15,7 @@
 
 <!-- /TOC -->
 
-#Spec
+# Spec
 
 - [o] next.js 세팅
 - [o] typescript (https://github.com/zeit/next.js/tree/canary/examples/custom-server-typescript, https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
@@ -44,11 +44,11 @@
 - [o] 도커 세팅
 
 
-#Prerequisites
+# Prerequisites
 
 - Node.js >= 8.x (Recommended the latest version) - 2018.08.08 v8.11.3 테스트 완료
 
-#Pre_Install
+# Pre_Install
 
 기본적으로 package.json에 등록된 npm명령어들은 yarn이 설치되었다는 전제하에 작성되어있다.
 yarn 설치 되어있다면 건너뛴다.
@@ -56,21 +56,21 @@ yarn 설치 되어있다면 건너뛴다.
 npm i -g yarn
 ```
 
-#Install
+# Install
 
 package.json에 작성된 의존성들을 설치한다.
 ```sh
 yarn
 ```
 
-#Config
+# Config
 
 `.env.sample`파일을 복사하여 `.env`이름으로 새로 저장한다.
 ```sh
 cp .env.sample .env
 ```
 
-#Develop_env
+# Develop_env
 
 ```env
 URL=http://localhost:3000
@@ -87,7 +87,7 @@ PORT=8809
 API_URL=https://api.github.com
 ```
 
-#Commands
+# Commands
 
 ```sh
 "scripts": {
@@ -101,14 +101,14 @@ API_URL=https://api.github.com
   }
 ```
 
-#Start
+# Start
 `.env`파일에 `PORT`값을 기준으로 서버포트가 열린다. (아무값도 지정하지 않을 경우 :3000)
 ```sh
 yarn dev
 open http://localhost:3000
 ```
 
-#Folder_structure
+# Folder_structure
 ```bash
 ├── README.md                 - 리드미 파일
 ├── tsconfig.test.json        - 테스트 코드용 ts 설정 파일 (tsconfig.json을 확장하여 사용)
