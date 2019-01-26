@@ -10,10 +10,10 @@ export function sampleApiRequest () {
     }
 }
 
-export function sampleApiSuccess (data) {
+export function sampleApiSuccess (res) {
     return {
         type: actionTypes.SAMPLE_API_SUCCESS,
-        data
+        res
     }
 }
 

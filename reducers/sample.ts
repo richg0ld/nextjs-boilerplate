@@ -21,16 +21,16 @@ function reducer (state = initialState, action) {
                 .setIn(["sample_api", "loaded"], false);
         case actionTypes.SAMPLE_API_SUCCESS:
             return state
-                .setIn(["sample_api", "status"], action.data.code)
+                .setIn(["sample_api", "status"], action.res.status)
                 .setIn(["sample_api", "loading"], false)
                 .setIn(["sample_api", "loaded"], true)
-                .setIn(["sample_api", "data"], fromJS(action.data.data));
+                .setIn(["sample_api", "data"], fromJS(action.res.data));
         case actionTypes.SAMPLE_API_FAILURE:
             return state
-                .setIn(["sample_api", "status"], action.err.status)
+                .setIn(["sample_api", "status"], action.err.response.status)
                 .setIn(["sample_api", "loading"], false)
                 .setIn(["sample_api", "loaded"], true)
-                .setIn(["sample_api", "error"], fromJS(action.err))
+                .setIn(["sample_api", "error"], fromJS(action.err.response))
         default:
             return state
     }

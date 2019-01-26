@@ -7,7 +7,7 @@ function * sampleApiSaga () {
         yield take(actionTypes.SAMPLE_API_REQUEST);
         try {
             const res = yield call(api.sampleApi);
-            yield put(sampleApiSuccess(res.data))
+            yield put(sampleApiSuccess(res))
         } catch (err) {
             yield put(sampleApiFailure(err))
         }
