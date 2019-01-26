@@ -125,9 +125,9 @@ app.prepare()
             renderAndCache(req, res, '/')
         });
 
-        server.get('/user/:playerName', (req, res) => {
-            const actualPage = '/user';
-            const queryParams = {playerName: req.params.playerName};
+        server.get('/param/:something', (req, res) => {
+            const actualPage = '/param';
+            const queryParams = {something: req.params.something};
             renderAndCache(req, res, actualPage, queryParams)
         });
 
