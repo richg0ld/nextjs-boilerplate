@@ -40,9 +40,6 @@ interface IApp {
 
 class MyApp extends App<IApp> {
   static async getInitialProps ({ Component, ctx }) {
-      /**
-       * @TODO: api, redux 연동 예시 작업 필요.
-       */
     const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ctx }) : {}
 
     const { req, isServer } = ctx;

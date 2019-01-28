@@ -12,6 +12,9 @@ interface IThemeProvider {
     theme: string,
 }
 
+/**
+ * @TODO: context api로 테마 사용하는 예제 추가, (작업하면서 언어 바꾸는 예제도 같이 할꺼임.)
+ */
 class ThemeProvider extends Component<IThemeProvider> {
     state = {
         theme: this.props.theme

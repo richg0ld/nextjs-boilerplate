@@ -1,6 +1,3 @@
-/**
- * @TODO: 파라미터 활용 예시 작업 필요.
- */
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { $themeColor, $themeColor2, $themeCommon } from '../styles/theme'
