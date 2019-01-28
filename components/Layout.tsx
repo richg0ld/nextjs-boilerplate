@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { injectIntl, InjectedIntlProps } from 'react-intl'
 import { $themeColor, $themeColor2 } from '../styles/theme'
 import Link from 'next/link'
+import Router from 'next/router'
 
 const Container = styled.article``;
 const Nav = styled.nav`
@@ -18,6 +19,13 @@ const H1 = styled.h1`
     background-color: ${$themeColor};
     color: ${$themeColor2};
 `;
+const Form = styled.form`
+    width: 200px;
+    border: 1px solid #000000;
+`
+const Input = styled.input.attrs({type: "text"})`
+    font-size: 16px;
+`
 
 export interface ILayout extends InjectedIntlProps {
     title?: string;
@@ -27,7 +35,28 @@ export interface ILayout extends InjectedIntlProps {
 }
 
 class Layout extends Component<ILayout> {
+    state = {
+        something: ''
+    }
+    onSubmit = (e) => {
+        e.preventDefault()
+        const { something } = this.state
+        if (!something) return;
+
+        return Router.push({
+            pathname:'/param',
+            query: {something}
+        }, `/param/${something}`);
+    }
+    onChange = (e) => {
+        this.setState({
+            something: e.target.value,
+        })
+    }
     render() {
+        const {
+            something
+        } = this.state;
         const {
             intl,
             title,
@@ -69,6 +98,12 @@ class Layout extends Component<ILayout> {
                         <a href="/etc/hello.html">hello</a>
                     </Item>
                 </Nav>
+                <Form onSubmit={this.onSubmit}>
+                    <Input value={something}
+                           onChange={this.onChange}
+                           placeholder={intl.formatMessage({id: "sample.enterText"})}
+                    />
+                </Form>
                 <H1>{intl.formatMessage({id: "sample.helloWorld"})}</H1>
                 {children}
             </Container>

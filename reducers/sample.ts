@@ -1,15 +1,12 @@
 import {actionTypes} from '../actions/sample'
-import { fromJS, List, Map } from 'immutable'
-import Cookies from 'js-cookie';
+import { fromJS, Map } from 'immutable'
 
 export const initialState = Map({
     sample_api: Map({
         status: 0,
         loading: false,
         loaded: false,
-        data: Map({
-
-        })
+        data: Map({})
     }),
 })
 

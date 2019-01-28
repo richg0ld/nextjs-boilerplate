@@ -1,5 +1,6 @@
 {
   "sample.helloWorld": "HELLO WORLD",
   "sample.boilerplate": "Boilerplate",
+  "sample.enterText": "Please enter text",
   "sample": "sample"
 }
