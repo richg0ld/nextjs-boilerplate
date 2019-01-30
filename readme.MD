@@ -76,7 +76,7 @@ cp .env.sample .env
 URL=http://localhost:3000
 CDN_URL=
 PORT=
-API_URL=https://api.github.com //실제로 개발시에는 앞으로 사용 할 api주소를 사용해야한다.
+API_URL=http://api.tvmaze.com //실제로 개발시에는 앞으로 사용 할 api주소를 사용해야한다.
 ```
 
 포트 번호를 다르게 하고싶다면 URL 쪽 포트도 꼭 같도록 맞추어야 한다.
@@ -84,7 +84,7 @@ API_URL=https://api.github.com //실제로 개발시에는 앞으로 사용 할 
 URL=http://localhost:8809
 CDN_URL=
 PORT=8809
-API_URL=https://api.github.com
+API_URL=http://api.tvmaze.com
 ```
 
 # Commands
