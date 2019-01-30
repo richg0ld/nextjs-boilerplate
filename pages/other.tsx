@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { $themeColor, $themeColor2, $themeCommon } from '../styles/theme'
+import { $themeBg, $themeColor, $themeColor2, $themeCommon, $themeFont } from '../styles/theme'
 import Layout, {ILayout} from '../components/Layout'
 import withIntl from '../lib/withIntl'
 import { InjectedIntlProps } from "react-intl"
@@ -14,6 +14,10 @@ const TransContent = styled.div`
     background-color: ${$themeCommon.plus};
     color: yellow;
 `
+const ThemeColorComp = styled.div`
+    background-color: ${$themeBg};
+    color: ${$themeFont};
+`
 
 interface IOther extends ILayout, InjectedIntlProps {}
 
@@ -22,10 +26,11 @@ class Other extends Component<IOther> {
     render() {
         const {intl} = this.props;
         return (
-            <Layout>
+            <Layout {...this.props}>
                 <Container>
                     <H2>Other Page</H2>
                     <TransContent>{intl.formatMessage({id: "sample.boilerplate"})}</TransContent>
+                    <ThemeColorComp>1234567890</ThemeColorComp>
                 </Container>
             </Layout>
         )

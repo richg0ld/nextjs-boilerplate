@@ -5,6 +5,8 @@ import { injectIntl, InjectedIntlProps } from 'react-intl'
 import { $themeColor, $themeColor2 } from '../styles/theme'
 import Link from 'next/link'
 import Router from 'next/router'
+import {ThemeConsumer} from '../contexts/ThemeProvider'
+import SelectLanguage from './SelectLanguage'
 
 const Container = styled.article``;
 const Nav = styled.nav`
@@ -23,6 +25,10 @@ const Form = styled.form`
     width: 200px;
     border: 1px solid #000000;
 `
+const ThemeBox = styled.span`
+    color: black;
+    background-color: yellowgreen;
+`
 const Input = styled.input.attrs({type: "text"})`
     font-size: 16px;
 `
@@ -31,6 +37,7 @@ export interface ILayout extends InjectedIntlProps {
     title?: string;
     description?: string;
     keywords?: string;
+    lang: string;
     children: ReactNode;
 }
 
@@ -62,6 +69,7 @@ class Layout extends Component<ILayout> {
             title,
             description,
             keywords,
+            lang,
             children,
         } = this.props;
 
@@ -78,6 +86,12 @@ class Layout extends Component<ILayout> {
                     <meta property="og:title" content={_title} />
                     <meta property="og:description" content={_description} />
                 </Head>
+                <ThemeConsumer>
+                    {({state, actions}) => <ThemeBox>
+                        <label id="chkBox"><input type="checkbox" name="theme" checked={state.theme === 'dark'} onChange={actions.changeTheme} /> Dark</label>
+                    </ThemeBox>}
+                </ThemeConsumer>
+                <SelectLanguage lang={lang} />
                 <Nav>
                     <Item>
                         <Link href="/">

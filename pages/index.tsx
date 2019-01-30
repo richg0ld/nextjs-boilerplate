@@ -25,7 +25,7 @@ class Index extends Component<IIndex> {
     }
     render() {
         return (
-            <Layout>
+            <Layout {...this.props}>
                 <Container>
                     <H2>Index Page</H2>
                 </Container>

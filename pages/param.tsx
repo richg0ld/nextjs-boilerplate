@@ -26,7 +26,7 @@ class Param extends Component<IParam> {
     render() {
         const { something } = this.props;
         return (
-            <Layout>
+            <Layout {...this.props}>
                 <Container>
                     <H2>Param Page</H2>
                     <ParamValue>

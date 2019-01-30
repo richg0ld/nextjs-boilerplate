@@ -3,7 +3,14 @@ import { ThemeProvider as StyledComponentsThemeProvider } from "styled-component
 import Cookies from 'js-cookie';
 import GlobalStyle from "../styles/global";
 
-const Context = createContext();
+const Context = createContext({
+    state: {
+        theme: 'light'
+    },
+    actions: {
+        changeTheme: () => {}
+    }
+});
 
 
 const {Provider, Consumer: ThemeConsumer} = Context;

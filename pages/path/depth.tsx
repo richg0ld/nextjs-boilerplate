@@ -27,7 +27,7 @@ class Depth extends Component<IDepth> {
     }
     render() {
         return (
-            <Layout>
+            <Layout {...this.props}>
                 <Container>
                     <H2>Depth Page</H2>
                 </Container>
