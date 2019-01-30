@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Layout, {ILayout} from '../components/Layout'
 import { $themeColor, $themeColor2 } from '../styles/theme'
 import * as sampleActions from '../actions/sample'
+import Sample from '../containers/Sample'
 
 const Container = styled.div``
 const H2 = styled.h2`
@@ -28,6 +29,7 @@ class Index extends Component<IIndex> {
             <Layout {...this.props}>
                 <Container>
                     <H2>Index Page</H2>
+                    <Sample />
                 </Container>
             </Layout>
         )

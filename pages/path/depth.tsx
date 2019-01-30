@@ -5,6 +5,7 @@ import Layout, {ILayout} from '../../components/Layout'
 import { connect } from 'react-redux'
 import * as sampleActions from '../../actions/sample'
 import {Map} from 'immutable';
+import Sample from '../../containers/Sample'
 
 const Container = styled.div``
 const H2 = styled.h2`
@@ -30,6 +31,7 @@ class Depth extends Component<IDepth> {
             <Layout {...this.props}>
                 <Container>
                     <H2>Depth Page</H2>
+                    <Sample />
                 </Container>
             </Layout>
         )

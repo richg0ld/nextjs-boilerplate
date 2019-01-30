@@ -4,6 +4,7 @@ import { $themeBg, $themeColor, $themeColor2, $themeCommon, $themeFont } from '.
 import Layout, {ILayout} from '../components/Layout'
 import withIntl from '../lib/withIntl'
 import { InjectedIntlProps } from "react-intl"
+import Sample from '../containers/Sample'
 
 const Container = styled.div``
 const H2 = styled.h2`
@@ -31,6 +32,7 @@ class Other extends Component<IOther> {
                     <H2>Other Page</H2>
                     <TransContent>{intl.formatMessage({id: "sample.boilerplate"})}</TransContent>
                     <ThemeColorComp>1234567890</ThemeColorComp>
+                    <Sample />
                 </Container>
             </Layout>
         )
