@@ -10,7 +10,11 @@ const Container = styled.div`
     text-align: center;
 `;
 
-class Sample extends React.Component {
+interface ISample {
+    txt: string;
+}
+
+class Sample extends React.Component<ISample> {
     render() {
         const {txt} = this.props;
         return (
